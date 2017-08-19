@@ -1,0 +1,39 @@
+{
+    "title": "Personal rules (@leohxj)",
+    "rules": [
+        {
+            "description": "Change left_control+v, left_option+v to page_down/page_up (rev 1)",
+            "manipulators": [{
+                    "type": "basic",
+                    "from": <%= from("v", ["left_control"], ["any"]) %>,
+                    "to": <%= to([["page_down"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["left_option"], ["any"]) %>,
+                    "to": <%= to([["page_up"]]) %>
+                }
+            ]
+        },
+        {
+            "description": "Change shift + delete to forward delete",
+            "manipulators": [{
+                "type": "basic",
+                "from": {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": {
+                        "mandatory": [
+                            "shift"
+                        ],
+                        "optional": [
+                            "caps_lock"
+                        ]
+                    }
+                },
+                "to": [{
+                    "key_code": "delete_forward"
+                }]
+            }]
+        }
+    ]
+}
