@@ -499,10 +499,7 @@
           },
           "to": [
             {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "home"
             }
           ]
         },
@@ -518,10 +515,7 @@
           },
           "to": [
             {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "end"
             }
           ]
         }
