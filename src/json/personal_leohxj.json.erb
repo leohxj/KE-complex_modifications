@@ -67,6 +67,11 @@
                     "from": <%= from("v", ["control"], ["caps_lock", "shift"]) %>,
                     "to": <%= to([["page_down"]]) %>,
                     "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("u", ["left_control"], []) %>,
+                    "to": <%= to([["delete_or_backspace", ["left_command"]]]) %>
                 }
             ]
         },
